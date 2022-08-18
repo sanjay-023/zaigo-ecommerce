@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
+import 'package:url_launcher/url_launcher.dart';
 import 'package:zaigoecommerce/app/modules/home/model/data_model.dart';
 import 'package:zaigoecommerce/app/modules/login/controllers/login_controller.dart';
 
@@ -27,5 +28,13 @@ class HomeController extends GetxController {
     } else {
       throw ("cannot get data");
     }
+  }
+
+  Future<void> makePhoneCall(String phoneNumber) async {
+    final Uri launchUri = Uri(
+      scheme: 'tel',
+      path: phoneNumber,
+    );
+    await launchUrl(launchUri);
   }
 }

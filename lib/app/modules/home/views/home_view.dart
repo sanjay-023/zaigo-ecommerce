@@ -34,7 +34,9 @@ class HomeView extends GetView<HomeController> {
                   itemBuilder: (context, index) {
                     return ListTile(
                       onTap: () {
-                        Get.to(DetailView());
+                        Get.to(DetailView(
+                          data: data![index],
+                        ));
                       },
                       leading: CircleAvatar(
                         backgroundImage:
