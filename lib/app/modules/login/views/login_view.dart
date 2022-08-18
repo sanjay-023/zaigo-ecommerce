@@ -7,6 +7,7 @@ import 'package:zaigoecommerce/app/modules/login/views/widget/text_box.dart';
 import '../controllers/login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
+  final loginController = Get.put(LoginController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,6 +54,7 @@ class LoginView extends GetView<LoginController> {
                         height: 26,
                       ),
                       LoginTextBox(
+                        textBoxController: loginController.phoneController,
                         boxIndex: 0,
                         textIcon: Icons.person,
                         hText: "Enter username/Email id",
@@ -61,6 +63,7 @@ class LoginView extends GetView<LoginController> {
                         height: 26,
                       ),
                       LoginTextBox(
+                        textBoxController: loginController.passwordController,
                         textIcon: Icons.lock,
                         boxIndex: 1,
                         hText: "Enter Password",

@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:zaigoecommerce/app/modules/login/controllers/login_controller.dart';
 
 class LoginButton extends StatelessWidget {
-  const LoginButton({Key? key}) : super(key: key);
+  LoginButton({Key? key}) : super(key: key);
+  final loginController = Get.put(LoginController());
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          loginController.login();
+        },
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [Text("LOGIN")],
