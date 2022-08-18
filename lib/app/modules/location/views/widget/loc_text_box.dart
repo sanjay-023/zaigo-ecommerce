@@ -2,12 +2,16 @@ import 'package:flutter/material.dart';
 
 class LocationTextBox extends StatelessWidget {
   final String hText;
-  const LocationTextBox({Key? key, required this.hText}) : super(key: key);
+  final TextEditingController textController;
+  const LocationTextBox(
+      {Key? key, required this.hText, required this.textController})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextField(
       // obscureText: boxIndex == 1 ? true : false,
+      controller: textController,
       decoration: InputDecoration(
           // prefixIcon: Icon(textIcon),
 
