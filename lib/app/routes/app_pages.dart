@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/gallery/bindings/gallery_binding.dart';
+import '../modules/gallery/views/gallery_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/login/bindings/login_binding.dart';
@@ -22,6 +24,11 @@ class AppPages {
       name: _Paths.LOGIN,
       page: () => LoginView(),
       binding: LoginBinding(),
+    ),
+    GetPage(
+      name: _Paths.GALLERY,
+      page: () => GalleryView(),
+      binding: GalleryBinding(),
     ),
   ];
 }
