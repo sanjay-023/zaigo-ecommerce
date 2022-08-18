@@ -4,6 +4,8 @@ import '../modules/gallery/bindings/gallery_binding.dart';
 import '../modules/gallery/views/gallery_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/location/bindings/location_binding.dart';
+import '../modules/location/views/location_view.dart';
 import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
 
@@ -29,6 +31,11 @@ class AppPages {
       name: _Paths.GALLERY,
       page: () => GalleryView(),
       binding: GalleryBinding(),
+    ),
+    GetPage(
+      name: _Paths.LOCATION,
+      page: () => LocationView(),
+      binding: LocationBinding(),
     ),
   ];
 }
