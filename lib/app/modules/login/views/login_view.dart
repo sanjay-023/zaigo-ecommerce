@@ -8,11 +8,15 @@ import '../controllers/login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
   final loginController = Get.put(LoginController());
+  final phoneController = TextEditingController();
+  final passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
-        bottomNavigationBar: LoginButton(),
+        bottomNavigationBar: LoginButton(
+            phoneText: phoneController.text,
+            passwordText: passwordController.text),
         body: SingleChildScrollView(
           child: SafeArea(
             child: Padding(
@@ -54,7 +58,7 @@ class LoginView extends GetView<LoginController> {
                         height: 26,
                       ),
                       LoginTextBox(
-                        textBoxController: loginController.phoneController,
+                        textBoxController: phoneController,
                         boxIndex: 0,
                         textIcon: Icons.person,
                         hText: "Enter username/Email id",
@@ -63,7 +67,7 @@ class LoginView extends GetView<LoginController> {
                         height: 26,
                       ),
                       LoginTextBox(
-                        textBoxController: loginController.passwordController,
+                        textBoxController: passwordController,
                         textIcon: Icons.lock,
                         boxIndex: 1,
                         hText: "Enter Password",

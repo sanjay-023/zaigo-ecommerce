@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:zaigoecommerce/app/modules/gallery/views/gallery_view.dart';
 import 'package:zaigoecommerce/app/modules/home/model/data_model.dart';
 import 'package:zaigoecommerce/app/modules/home/views/widget/detail_view.dart';
+import 'package:zaigoecommerce/app/modules/home/views/widget/logout_button.dart';
 import 'package:zaigoecommerce/app/modules/location/views/location_view.dart';
 import 'package:zaigoecommerce/app/modules/login/controllers/login_controller.dart';
 
@@ -37,6 +38,7 @@ class HomeView extends GetView<HomeController> {
           ],
           foregroundColor: Colors.black,
         ),
+        bottomNavigationBar: LogoutButton(),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             Get.to(GalleryView());

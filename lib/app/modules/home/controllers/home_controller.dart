@@ -2,9 +2,11 @@ import 'dart:convert';
 
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:zaigoecommerce/app/modules/home/model/data_model.dart';
 import 'package:zaigoecommerce/app/modules/login/controllers/login_controller.dart';
+import 'package:zaigoecommerce/app/modules/login/views/login_view.dart';
 
 class HomeController extends GetxController {
   final loginController = Get.put(LoginController());
@@ -36,5 +38,11 @@ class HomeController extends GetxController {
       path: phoneNumber,
     );
     await launchUrl(launchUri);
+  }
+
+  void logout() async {
+    final sharedprfns = await SharedPreferences.getInstance();
+    sharedprfns.clear();
+    Get.offAll(LoginView());
   }
 }

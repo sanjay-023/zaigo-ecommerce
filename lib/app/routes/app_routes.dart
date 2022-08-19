@@ -8,6 +8,8 @@ abstract class Routes {
   static const GALLERY = _Paths.GALLERY;
   static const TEMP = _Paths.TEMP;
   static const LOCATION = _Paths.LOCATION;
+  static const MAP = _Paths.MAP;
+  static const SPLASH = _Paths.SPLASH;
 }
 
 abstract class _Paths {
@@ -17,4 +19,6 @@ abstract class _Paths {
   static const GALLERY = '/gallery';
   static const TEMP = '/temp';
   static const LOCATION = '/location';
+  static const MAP = '/map';
+  static const SPLASH = '/splash';
 }

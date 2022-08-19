@@ -46,9 +46,9 @@ class LocationController extends GetxController {
                 target: LatLng(result[0].latitude, result[0].longitude),
                 zoom: 14.5)));
         sourceLocation = LatLng(result[0].latitude, result[0].longitude);
+        update();
       },
     );
-    update();
   }
 
   onLocationButtonClicked() {
@@ -65,7 +65,7 @@ class LocationController extends GetxController {
       cityController.clear();
       stateController.clear();
       countryController.clear();
-
+      searchAndNavigate("nileshwar,kerala,india");
       update();
 
       Get.to(MapScreen());
