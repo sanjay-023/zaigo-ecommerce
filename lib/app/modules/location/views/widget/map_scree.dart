@@ -11,7 +11,10 @@ class MapScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     print(locationController.sourceLocation);
     locationController.searchController.text = locationController.locationText;
-    locationController.searchAndNavigate(locationController.locationText);
+    locationController.onMapCreated;
+    locationController
+        .searchAndNavigate(locationController.locationText)
+        .then((value) => {locationController.update()});
 
     return Scaffold(
       appBar: AppBar(

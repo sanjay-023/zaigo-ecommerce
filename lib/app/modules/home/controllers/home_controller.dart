@@ -7,6 +7,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:zaigoecommerce/app/modules/home/model/data_model.dart';
 import 'package:zaigoecommerce/app/modules/login/controllers/login_controller.dart';
 import 'package:zaigoecommerce/app/modules/login/views/login_view.dart';
+import 'package:zaigoecommerce/main.dart';
 
 class HomeController extends GetxController {
   final loginController = Get.put(LoginController());
@@ -14,10 +15,12 @@ class HomeController extends GetxController {
   final String apiUrl =
       "http://80.211.233.121/blacklight/blacklight/public/api/lawyers/index";
   Future<List<Datum>> getData() async {
+    final sharedprfns = await SharedPreferences.getInstance();
     final response = await http.get(Uri.parse(apiUrl),
         headers: ({
-          "Authorization": "Bearer ${loginController.data.accessToken}"
+          "Authorization": "Bearer ${sharedprfns.getString(SAVE_KEY)}"
         }));
+
     if (response.statusCode == 200) {
       Map<String, dynamic> json = jsonDecode(response.body);
       List<dynamic> body = json['data'];

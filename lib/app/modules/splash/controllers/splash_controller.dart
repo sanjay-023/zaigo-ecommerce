@@ -30,8 +30,9 @@ class SplashController extends GetxController {
 
   void checkUserLoggedIn() async {
     final sharedprfns = await SharedPreferences.getInstance();
-    final userLoggedIn = sharedprfns.getBool(SAVE_KEY);
-    if (userLoggedIn == null || userLoggedIn == false) {
+    final userLoggedIn = sharedprfns.getString(SAVE_KEY);
+    print(SAVE_KEY);
+    if (userLoggedIn == null || userLoggedIn == "") {
       gotologin();
     } else {
       Get.off(HomeView());

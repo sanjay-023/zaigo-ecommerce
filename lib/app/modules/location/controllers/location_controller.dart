@@ -38,7 +38,7 @@ class LocationController extends GetxController {
     update();
   }
 
-  searchAndNavigate(String address) {
+  Future searchAndNavigate(String address) async {
     locationFromAddress(address).then(
       (result) {
         mapController!.animateCamera(CameraUpdate.newCameraPosition(
@@ -65,7 +65,8 @@ class LocationController extends GetxController {
       cityController.clear();
       stateController.clear();
       countryController.clear();
-      searchAndNavigate("nileshwar,kerala,india");
+
+      // searchAndNavigate(locationText);
       update();
 
       Get.to(MapScreen());

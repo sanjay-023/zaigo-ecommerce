@@ -28,7 +28,8 @@ class LoginController extends GetxController {
 
         print(data);
         final sharedprfns = await SharedPreferences.getInstance();
-        await sharedprfns.setBool(SAVE_KEY, true);
+        await sharedprfns.setString(SAVE_KEY, data.accessToken!);
+        update();
 
         Get.offAll(HomeView());
       } else {
