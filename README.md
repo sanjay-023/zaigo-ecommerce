@@ -1,16 +1,17 @@
 # zaigoecommerce
 
-A new Flutter project.
+A sample app build with getx as statemanagement and in MVC architecture.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Libraries & packages used
+- GetX
+- screen_util
+- http
+- url_launcher
+- image_picker
+- path_provider
+- shared_preference
+- google_map
+- geocoding
+- flutter_toast
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
