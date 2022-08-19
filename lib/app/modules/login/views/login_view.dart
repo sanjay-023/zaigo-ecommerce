@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 import 'package:zaigoecommerce/app/modules/login/views/widget/login_button.dart';
@@ -20,7 +21,7 @@ class LoginView extends GetView<LoginController> {
         body: SingleChildScrollView(
           child: SafeArea(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 26),
+              padding: EdgeInsets.symmetric(horizontal: 26.w),
               child: SizedBox(
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -30,32 +31,32 @@ class LoginView extends GetView<LoginController> {
                         children: [
                           MediaQuery.of(context).viewInsets.bottom == 0
                               ? Image(
-                                  width: 220,
-                                  height: 220,
+                                  width: 220.w,
+                                  height: 220.h,
                                   image: AssetImage(
                                       "asset/images/Screenshot from 2022-08-17 17-31-22.png"))
                               : SizedBox(
-                                  height: 50,
+                                  height: 50.h,
                                 ),
                         ],
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 10.h,
                       ),
                       Text(
                         "Welcome User",
                         style: TextStyle(
-                            fontSize: 33, fontWeight: FontWeight.w500),
+                            fontSize: 33.sp, fontWeight: FontWeight.w500),
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 10.h,
                       ),
                       Text(
                         "Enter your details to login to your account",
                         style: TextStyle(color: Colors.grey),
                       ),
                       SizedBox(
-                        height: 26,
+                        height: 26.h,
                       ),
                       LoginTextBox(
                         textBoxController: phoneController,
@@ -64,7 +65,7 @@ class LoginView extends GetView<LoginController> {
                         hText: "Enter username/Email id",
                       ),
                       SizedBox(
-                        height: 26,
+                        height: 26.h,
                       ),
                       LoginTextBox(
                         textBoxController: passwordController,
@@ -73,7 +74,7 @@ class LoginView extends GetView<LoginController> {
                         hText: "Enter Password",
                       ),
                       SizedBox(
-                        height: 8,
+                        height: 8.h,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,

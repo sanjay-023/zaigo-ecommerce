@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:zaigoecommerce/app/modules/login/controllers/login_controller.dart';
 
@@ -23,6 +24,6 @@ class LoginButton extends StatelessWidget {
             primary: Color.fromARGB(255, 79, 33, 243),
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(0)),
-            minimumSize: Size(200, 50)));
+            minimumSize: Size(200.w, 50.h)));
   }
 }

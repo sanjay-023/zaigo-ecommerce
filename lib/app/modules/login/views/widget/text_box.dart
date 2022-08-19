@@ -20,9 +20,6 @@ class LoginTextBox extends StatelessWidget {
       obscureText: boxIndex == 1 ? true : false,
       decoration: InputDecoration(
           prefixIcon: Icon(textIcon),
-
-          // filled: true,
-          // fillColor: Color.fromARGB(255, 3, 3, 12),
           hintText: hText,
           enabledBorder: OutlineInputBorder(
               borderSide:

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 import 'package:zaigoecommerce/app/modules/location/views/widget/loc_text_box.dart';
@@ -22,37 +23,37 @@ class LocationView extends GetView<LocationController> {
             child: Column(
               children: [
                 SizedBox(
-                  height: 30,
+                  height: 30.h,
                 ),
                 LocationTextBox(
                     hText: "Door Number",
                     textController: locationController.doorController),
                 SizedBox(
-                  height: 20,
+                  height: 20.h,
                 ),
                 LocationTextBox(
                     hText: "Street Name",
                     textController: locationController.streetController),
                 SizedBox(
-                  height: 20,
+                  height: 20.h,
                 ),
                 LocationTextBox(
                     hText: "City",
                     textController: locationController.cityController),
                 SizedBox(
-                  height: 20,
+                  height: 20.h,
                 ),
                 LocationTextBox(
                     hText: "State",
                     textController: locationController.stateController),
                 SizedBox(
-                  height: 20,
+                  height: 20.h,
                 ),
                 LocationTextBox(
                     hText: "Country",
                     textController: locationController.countryController),
                 SizedBox(
-                  height: 20,
+                  height: 20.h,
                 ),
                 ElevatedButton(
                     onPressed: () {
@@ -63,7 +64,7 @@ class LocationView extends GetView<LocationController> {
                       children: [
                         Icon(Icons.location_pin),
                         SizedBox(
-                          width: 8,
+                          width: 8.h,
                         ),
                         Text(
                           "Locate",
@@ -75,7 +76,7 @@ class LocationView extends GetView<LocationController> {
                         primary: Color.fromARGB(255, 209, 9, 9),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10)),
-                        minimumSize: Size(200, 50)))
+                        minimumSize: Size(200.w, 50.h)))
               ],
             ),
           ),

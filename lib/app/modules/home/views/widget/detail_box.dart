@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DetailBox extends StatelessWidget {
   final String boxTitle;
@@ -20,12 +21,12 @@ class DetailBox extends StatelessWidget {
           children: [
             Text(
               boxTitle,
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+              style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.w500),
             ),
             SizedBox(height: 10),
             Text(
               data,
-              style: TextStyle(fontSize: 16),
+              style: TextStyle(fontSize: 16.sp),
             )
           ],
         ),

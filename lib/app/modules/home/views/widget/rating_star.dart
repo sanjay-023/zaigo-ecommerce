@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_stars/flutter_rating_stars.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class RatingStar extends StatelessWidget {
   final double value;
@@ -12,7 +13,7 @@ class RatingStar extends StatelessWidget {
       starBuilder: (index, color) => Icon(
         Icons.star,
         color: color,
-        size: 18,
+        size: 18.sp,
       ),
       starCount: 5,
       starSize: 18,

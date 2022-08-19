@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 import 'package:zaigoecommerce/app/modules/gallery/views/gallery_view.dart';
@@ -33,7 +34,7 @@ class HomeView extends GetView<HomeController> {
                 label: Text(
                   "Location",
                   style: TextStyle(
-                      color: Color.fromARGB(255, 200, 18, 5), fontSize: 16),
+                      color: Color.fromARGB(255, 200, 18, 5), fontSize: 16.sp),
                 ))
           ],
           foregroundColor: Colors.black,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:zaigoecommerce/app/modules/home/model/data_model.dart';
 import 'package:zaigoecommerce/app/modules/home/views/widget/call_button.dart';
@@ -23,71 +24,73 @@ class DetailView extends StatelessWidget {
             },
             icon: Icon(Icons.close)),
       ),
-      body: SizedBox(
-        child: Padding(
-          padding: const EdgeInsets.all(10),
-          child: Column(
-            children: [
-              ListTile(
-                  leading: CircleAvatar(
-                    radius: 36,
-                    backgroundImage: NetworkImage(data.profilePicture!),
-                  ),
-                  title: Text(
-                    data.name!,
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  subtitle: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("${data.fieldOfExpertise!} Lawyer"),
-                      data.rating!.isEmpty
-                          ? SizedBox()
-                          : RatingStar(value: double.parse(data.rating!))
-                    ],
-                  )),
-              SizedBox(
-                height: 20,
-              ),
-              DetailBox(
-                boxTitle: "Bio",
-                data: data.bio!,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              DetailBox(
-                boxTitle: "Address",
-                data: data.address!,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              DetailBox(
-                boxTitle: "State",
-                data: data.state!,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              DetailBox(
-                boxTitle: "Email",
-                data: data.email!,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              DetailBox(
-                boxTitle: "Contact",
-                data: data.phoneNo!,
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              CallButton(
-                phoneNumber: data.phoneNo!,
-              )
-            ],
+      body: SingleChildScrollView(
+        child: SizedBox(
+          child: Padding(
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              children: [
+                ListTile(
+                    leading: CircleAvatar(
+                      radius: 36.r,
+                      backgroundImage: NetworkImage(data.profilePicture!),
+                    ),
+                    title: Text(
+                      data.name!,
+                      style: TextStyle(fontSize: 20.sp),
+                    ),
+                    subtitle: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("${data.fieldOfExpertise!} Lawyer"),
+                        data.rating!.isEmpty
+                            ? SizedBox()
+                            : RatingStar(value: double.parse(data.rating!))
+                      ],
+                    )),
+                SizedBox(
+                  height: 20.h,
+                ),
+                DetailBox(
+                  boxTitle: "Bio",
+                  data: data.bio!,
+                ),
+                SizedBox(
+                  height: 20.h,
+                ),
+                DetailBox(
+                  boxTitle: "Address",
+                  data: data.address!,
+                ),
+                SizedBox(
+                  height: 20.h,
+                ),
+                DetailBox(
+                  boxTitle: "State",
+                  data: data.state!,
+                ),
+                SizedBox(
+                  height: 20.h,
+                ),
+                DetailBox(
+                  boxTitle: "Email",
+                  data: data.email!,
+                ),
+                SizedBox(
+                  height: 20.h,
+                ),
+                DetailBox(
+                  boxTitle: "Contact",
+                  data: data.phoneNo!,
+                ),
+                SizedBox(
+                  height: 10.h,
+                ),
+                CallButton(
+                  phoneNumber: data.phoneNo!,
+                )
+              ],
+            ),
           ),
         ),
       ),

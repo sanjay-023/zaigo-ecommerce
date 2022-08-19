@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:zaigoecommerce/app/modules/home/controllers/home_controller.dart';
 
@@ -10,18 +11,31 @@ class LogoutButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
         onPressed: () {
-          homeController.logout();
+          Get.defaultDialog(
+              title: "Logout",
+              middleText: "Do you really want to logout?",
+              textConfirm: "Yes",
+              textCancel: "Cancel",
+              cancelTextColor: Colors.black,
+              confirmTextColor: Colors.white,
+              onConfirm: () {
+                homeController.logout();
+              },
+              buttonColor: Color.fromARGB(255, 231, 23, 8),
+              onCancel: () {
+                Get.back();
+              });
         },
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(Icons.exit_to_app),
             SizedBox(
-              width: 8,
+              width: 8.w,
             ),
             Text(
               "Logout",
-              style: TextStyle(fontSize: 18),
+              style: TextStyle(fontSize: 18.sp),
             )
           ],
         ),
@@ -29,6 +43,6 @@ class LogoutButton extends StatelessWidget {
             primary: Color.fromARGB(255, 225, 7, 7),
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(0)),
-            minimumSize: Size(200, 50)));
+            minimumSize: Size(200.w, 50.h)));
   }
 }

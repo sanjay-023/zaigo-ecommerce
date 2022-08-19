@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 import 'package:zaigoecommerce/app/modules/gallery/views/widget/image_view.dart';
@@ -41,7 +42,7 @@ class GalleryView extends GetView<GalleryController> {
                       tag: galleryController.listImagePath[index],
                       child: Container(
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(10.r),
                             image: DecorationImage(
                                 fit: BoxFit.fill,
                                 image: FileImage(File(

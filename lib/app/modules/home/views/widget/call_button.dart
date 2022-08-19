@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:zaigoecommerce/app/modules/home/controllers/home_controller.dart';
 
@@ -18,11 +19,11 @@ class CallButton extends StatelessWidget {
           children: [
             Icon(Icons.phone),
             SizedBox(
-              width: 8,
+              width: 8.w,
             ),
             Text(
               "Call",
-              style: TextStyle(fontSize: 18),
+              style: TextStyle(fontSize: 18.sp),
             )
           ],
         ),
@@ -30,6 +31,6 @@ class CallButton extends StatelessWidget {
             primary: Color.fromARGB(255, 15, 176, 10),
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(0)),
-            minimumSize: Size(200, 50)));
+            minimumSize: Size(200.w, 50.h)));
   }
 }
